@@ -1,0 +1,166 @@
+
+body
+{
+    position: relative;
+    height: 100vh;
+    width:100%;
+    margin: 0;
+    background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-attachment: fixed;
+	overflow: hidden;
+}
+.red{
+	color:#b30e16;
+	font-size: large;
+	font-weight: bold;
+	text-align: center;
+}
+#canvas{
+	display: none;
+}
+.main{
+display: none;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Style for the input container */
+.overlay-content {
+	width: 300px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+/* Styling for input field and button */
+.overlay-input {
+	width: 80%;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.overlay-button {
+	padding: 10px 20px;
+	background-color: #b30e16;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.bg{
+	/* bottom:0; */
+    position: absolute;
+	z-index: 1;
+}
+.bg img {
+	padding: relative;
+	width: 100%;
+	object-fit: cover;
+  }
+
+.card {
+	 position: relative;
+	 z-index: 5;
+	 width: 300px;
+	 aspect-ratio: 0.75;
+	 border: 10px solid rgb(166,44,43);
+	 margin: 60px auto 0 auto;
+	 box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)), url("./card.jpg");
+
+background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+	 background-color: #e6f0e6;
+}
+ .card .text-container {
+	 width: 80%;
+	 height: 80%;
+	 margin: auto;
+}
+ .strikethrough {
+	 text-decoration: line-through;
+}
+ .card .text-container #head {
+	 font-family: 'Nobile', sans-serif;
+	 font-size: 1.5em;
+	 margin: 60px auto 60px auto;
+}
+ .card p {
+	 font-size: 1.1em;
+	 line-height: 1.4;
+	 font-family: 'Nobile';
+	 color: #331717;
+	 font-style: italic;
+	 text-align: center;
+	 margin: 30px auto 0px auto;
+}
+ .card .front {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: -10px 0px 0px -10px;
+	 border: 10px solid rgb(166,44,43);
+	 backface-visibility: hidden;
+	 background-color: rgb(166,44,43);
+	/* background-image: url($cover-image);
+	 */
+	 background-size: contain;
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+}
+ .card:hover .front {
+	 transform: perspective(800px) rotateY(-170deg);
+	 background-color: #41718d;
+}
+ .card:hover .back {
+	 transform: perspective(800px) rotateY(-170deg);
+	 box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+	 background-color: #d2dcd2;
+}
+ .card .back {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 border: 10px solid rgb(166,44,43);
+	 margin: -10px 0px 0px -10px;
+	 backface-visibility: visible;
+	 filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+	 background-color: #e6f0e6;
+	 box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.imgset
+{
+  position: relative;
+  z-index: 1;
+  margin-bottom: -215px;
+}
+.imgset img
+{
+    box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+}

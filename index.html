@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="overlay" id="overlay">
+      <div class="overlay-content">
+          <h2>Enter Your Age</h2>
+          <input type="text" class="overlay-input" placeholder="Type your age..." id="overlayInput">
+          <button class="overlay-button" onclick="submitOverlay()">Submit</button>
+      </div>
+  </div>
+  
+  <div id="balloons">
+    <p class="red">Brust balloons equal to your age</p>
+    <div id="counter">🎈 <span id="balloons_popped">0</span></div>
+  </body>
+  </div>
+  <canvas id="canvas"></canvas>
+  <div class="main">
+    <p class="red">Click / Hover on the card to open</p>
+    <div class="bg">
+      <img src="./ribbon-isolated-white.jpg" width="100%" alt="">
+    </div>
+    <div class="card">
+      <div class="back"></div>
+      <div class="front">
+        <div class="imgset">
+          <img
+            width="100%"
+            src="./card.jpg"
+          />
+        </div>
+      </div>
+      <div class="text-container">
+        <p id="head"></p>
+        <p>
+          I hope your special day will bring you lots of happiness, love, and
+          fun. You deserve them a lot. Enjoy!
+        </p>
+        <p id="party"></p>
+        <p>Hope your day goes great!</p>
+      </div>
+    </div>
+  </div>
+    <script src="./app.js"></script>
+    <script src="./confetti.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./audio.js"></script>
+  </body>
+</html>
