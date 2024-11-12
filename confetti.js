@@ -1,4 +1,9 @@
 //-----------Var Inits--------------
+function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
+
 const queryString = window.location.search; 
 const params = new URLSearchParams(queryString);
 const name = params.get('name');
@@ -104,7 +109,7 @@ render = () => {
   if (confetti.length <= 100 &&!createBallon){
     canvas.style.display="none";
     document.getElementsByClassName("main")[0].style.display="block";
-    document.getElementById("head").innerHTML=`Happy Birthday ${name}`;
+    document.getElementById("head").innerHTML=`Happy Birthday ${name?capitalizeFirstLetter(name):''}`;
     document.getElementById("party").innerHTML=`To party kb de ${gender?gender.toUpperCase()==='F'?'rhi':'rhe':'rhe'} ho`;
   }else if(confetti.length<=10){
   initConfetti();
